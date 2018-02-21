@@ -1,0 +1,39 @@
+{
+  "name": "graphqla",
+  "version": "1.0.0",
+  "description": "this a service vampiro using graphql ",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "start:watch": "nodemon",
+    "prestart:prod": "tsc",
+    "start:prod": "node dist/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jcamilo97/GraphQLa.git"
+  },
+  "author": "juan camilo caviedes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jcamilo97/GraphQLa/issues"
+  },
+  "homepage": "https://github.com/jcamilo97/GraphQLa#readme",
+  "dependencies": {
+    "@nestjs/common": "^4.6.4",
+    "@nestjs/core": "^4.6.4",
+    "@nestjs/microservices": "^4.6.4",
+    "@nestjs/mongoose": "^3.0.1",
+    "@nestjs/testing": "^4.6.1",
+    "@nestjs/websockets": "^4.5.8",
+    "mongoose": "^5.0.6",
+    "reflect-metadata": "^0.1.12",
+    "rxjs": "^5.5.6",
+    "typescript": "^2.7.2"
+  },
+  "devDependencies": {
+    "@types/node": "^9.4.6",
+    "nodemon": "^1.15.1",
+    "ts-node": "^5.0.0"
+  }
+}
