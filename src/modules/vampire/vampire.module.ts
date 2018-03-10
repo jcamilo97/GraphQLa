@@ -5,7 +5,7 @@ import { VampireService } from './vampire.service';
 import { VampireSchema } from './schemas/vampire.schema';
 
 @Module({
-  imports: [MongooseModule.forFeature([{ name: 'Cat', schema: VampireSchema }])],
+  imports: [MongooseModule.forFeature([{ name: 'Vampire', schema: VampireSchema }])],
   controllers: [VampireController],
   components: [VampireService],
 })

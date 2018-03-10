@@ -4,7 +4,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { VampireModule } from './modules/vampire/vampire.module';
 
 @Module({
-  imports: [MongooseModule.forRoot('mongodb://localhost/nest'), VampireModule],
+  imports: [MongooseModule.forRoot('mongodb://localhost/vampiresdb'), VampireModule],
   controllers: [AppController],
   components: [],
 })

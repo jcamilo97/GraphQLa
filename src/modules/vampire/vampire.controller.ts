@@ -1,5 +1,7 @@
 import { Controller, Get, Post, Req, Res, Body, Next, HttpStatus} from '@nestjs/common';
 import { VampireService } from './vampire.service';
+import { Vampire } from './interfaces/vampire.interface';
+import { CreateVampireDto } from './dto/create-vampire.dto';
 
 
 @Controller()
@@ -10,12 +12,12 @@ export class VampireController {
   private readonly vampireservice:VampireService) {}
      
   @Post()
-  async createVampire(@Req() req, @Res() res, @Body() body) {
+  async createVampire(@Req() req, @Res() res, @Body() body:CreateVampireDto) {
     res.status(HttpStatus.OK).send(await this.vampireservice.create(body))
   }
 
-  @Get('/:id')
-  async vampires(@Req() req, @Res() res, @Body() body) {
-    res.status(HttpStatus.OK).send(await this.vampireservice.findAll())
+  @Get()
+  async vampires(@Req() req, @Res() res, @Body() body):Promise<Vampire> {
+   return res.status(HttpStatus.OK).send(await this.vampireservice.findAll())
   }
 }
