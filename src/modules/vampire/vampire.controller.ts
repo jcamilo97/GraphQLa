@@ -4,7 +4,7 @@ import { Vampire } from './interfaces/vampire.interface';
 import { CreateVampireDto } from './dto/create-vampire.dto';
 
 
-@Controller()
+@Controller('/vampires')
 
 export class VampireController {
 

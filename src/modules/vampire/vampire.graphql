@@ -1,0 +1,12 @@
+type Query {
+  getVampires: [Vampire]
+  vampire(name: String!): Vampire
+}
+
+type Vampire {
+  _id: Int
+  name: String
+  age: Int,
+  clan: String
+}
+

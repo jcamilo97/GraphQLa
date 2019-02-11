@@ -3,11 +3,11 @@ import { VampireController } from './vampire.controller';
 import { VampireService } from './vampire.service';
 import { VampireSchema } from './schemas/vampire.schema';
 import { vampiresProviders } from './vampire.provider';
+import { vampiresResolver } from './vampire.resolver';
 import { DatabaseModule } from '../database/database.module';
 
 @Module({
   imports: [DatabaseModule],
-  controllers: [VampireController],
-  components: [VampireService, ...vampiresProviders],
+  providers: [VampireService, vampiresResolver, ...vampiresProviders],
 })
 export class VampireModule {}
