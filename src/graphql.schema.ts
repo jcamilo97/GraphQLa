@@ -1,4 +1,15 @@
 /* tslint:disable */
+export class CreateVampireInput {
+    _id?: number;
+    name?: string;
+    age?: number;
+    clan: string;
+}
+
+export abstract class IMutation {
+    abstract createVampire(vampireObj?: CreateVampireInput): Vampire | Promise<Vampire>;
+}
+
 export abstract class IQuery {
     abstract getVampires(): Vampire[] | Promise<Vampire[]>;
 
@@ -11,5 +22,5 @@ export class Vampire {
     _id?: number;
     name?: string;
     age?: number;
-    clan?: string;
+    clan: string;
 }

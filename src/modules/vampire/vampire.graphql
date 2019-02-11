@@ -3,10 +3,21 @@ type Query {
   vampire(name: String!): Vampire
 }
 
+type Mutation {
+  createVampire(vampireObj: CreateVampireInput): Vampire
+}
+
 type Vampire {
-  _id: Int
+  _id: Int,
   name: String
   age: Int,
-  clan: String
+  clan: String!
+}
+
+input CreateVampireInput {
+  _id: Int,
+  name: String
+  age: Int,
+  clan: String!
 }
 
